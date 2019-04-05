@@ -5,6 +5,7 @@ package main
 
 import (
 	"crypto/rand"
+	"flag"
 	"fmt"
 )
 
@@ -33,11 +34,13 @@ func randStr(strSize int, randType string) string {
 }
 
 func main() {
+	length := flag.Int("length", 16, "password length")
+	flag.Parse()
 
-	fmt.Println("Alphanum : ", randStr(16, "alphanum"))
+	fmt.Println("Alphanum : ", randStr(*length, "alphanum"))
 
-	fmt.Println("Alpha : ", randStr(16, "alpha"))
+	fmt.Println("Alpha : ", randStr(*length, "alpha"))
 
-	fmt.Println("Numbers : ", randStr(16, "number"))
+	fmt.Println("Numbers : ", randStr(*length, "number"))
 
 }
