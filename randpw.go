@@ -26,7 +26,8 @@ func randStr(strSize int, randType string) string {
 	}
 
 	var bytes = make([]byte, strSize)
-	rand.Read(bytes)
+	_, err := rand.Read(bytes)
+	checkErr(err)
 	for k, v := range bytes {
 		bytes[k] = dictionary[v%byte(len(dictionary))]
 	}
@@ -43,4 +44,10 @@ func main() {
 
 	fmt.Println("Numbers : ", randStr(*length, "number"))
 
+}
+
+func checkErr(err error) {
+	if err != nil {
+		panic(err)
+	}
 }
