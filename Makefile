@@ -5,6 +5,6 @@ check:
 	golangci-lint run
 
 release:
-	goreleaser release --snapshot --clean
+	goreleaser release --clean
 
 .PHONY: build check release

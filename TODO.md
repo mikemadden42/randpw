@@ -37,12 +37,12 @@
   - Add `version: 2`
   - `snapshot.name_template` → `snapshot.version_template`
   - Drop the unused `go generate ./...` hook and leftover example comments.
-- [ ] **Makefile**: the `release` target uses `--snapshot`, so it never publishes.
+- [x] **Makefile**: the `release` target uses `--snapshot`, so it never publishes.
   Rename it or drop the flag.
 
 ## CI
 
-- [ ] Raise the `go` line in `go.mod` from 1.18 to the oldest version CI tests (1.23).
+- [x] Raise the `go` line in `go.mod` from 1.18 to the oldest version CI tests (1.23).
 - [x] Add `randpw_test.go`: length, character-set membership, and a rough
   distribution check (would have caught the modulo bias).
 - [x] Add a lint step (`golangci/golangci-lint-action`) once the config is fixed.
