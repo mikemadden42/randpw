@@ -1,6 +1,7 @@
+// Command randpw prints random alphanumeric, alphabetic and numeric passwords.
+//
 // Based on example found at:
 // https://www.socketloop.com/tutorials/golang-how-to-generate-random-string
-
 package main
 
 import (

@@ -26,14 +26,14 @@
 
 ## Tooling and configuration
 
-- [ ] **Fix `.golangci.yml` for v2** (`golangci-lint config verify` fails):
+- [x] **Fix `.golangci.yml` for v2** (`golangci-lint config verify` fails):
   - `version: 2` → `version: "2"`
   - `disable-all: true` → `linters.default: none`
   - `linters-settings` → `linters.settings`; goimports settings go under
     `formatters.settings.goimports.local-prefixes` (a list)
   - `issues.exclude-dirs` → `linters.exclusions.paths`
   - After fixing, address the lint findings: G115 (above) and missing package comment.
-- [ ] **Fix `.goreleaser.yaml`** (`goreleaser check` fails):
+- [x] **Fix `.goreleaser.yaml`** (`goreleaser check` fails):
   - Add `version: 2`
   - `snapshot.name_template` → `snapshot.version_template`
   - Drop the unused `go generate ./...` hook and leftover example comments.
