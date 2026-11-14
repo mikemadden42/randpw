@@ -45,8 +45,8 @@
 - [ ] Raise the `go` line in `go.mod` from 1.18 to the oldest version CI tests (1.23).
 - [x] Add `randpw_test.go`: length, character-set membership, and a rough
   distribution check (would have caught the modulo bias).
-- [ ] Add a lint step (`golangci/golangci-lint-action`) once the config is fixed.
-- [ ] Bump `actions/setup-go` and `actions/checkout` to current major versions.
+- [x] Add a lint step (`golangci/golangci-lint-action`) once the config is fixed.
+- [x] Bump `actions/setup-go` and `actions/checkout` to current major versions.
 
 ## Docs and minor cleanup
 
